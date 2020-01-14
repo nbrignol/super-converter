@@ -67,3 +67,8 @@ footer {
 	padding: 0.5em;
 	text-align: center;
 }
+
+.disabled {
+	opacity: 0.3;
+	pointer-events: none;
+}
