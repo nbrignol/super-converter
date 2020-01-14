@@ -48,6 +48,14 @@ header {
 
 }
 
+.result .toValue {
+	background-image: url(image/arrow1.png);
+	background-size: 1em;
+	background-repeat: no-repeat;
+
+	padding-left: 1.1em;
+}
+
 
 footer {
 	position: absolute;
