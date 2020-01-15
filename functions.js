@@ -12,7 +12,7 @@ function processConvert() {
 	var toValueElement = document.querySelector(".result .toValue");
 
 	fromValueElement.innerHTML = value + "€";
-	toValueElement.innerHTML = result + "$";
+	toValueElement.innerHTML = result + currentSymbol;
 }
 
 function updateRateWebService() {
@@ -26,10 +26,7 @@ function updateRateWebService() {
 		var dataText = event.target.responseText;
 		var data = JSON.parse(dataText);
 
-		console.log(dataText);
-		console.log(data.rates.USD);
-
-		rate = data.rates.USD;
+		rate = data.rates[currentCurrency];
 
 		var element = document.querySelector(".userInput");
 		element.classList.remove("disabled");

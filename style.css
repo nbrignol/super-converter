@@ -92,3 +92,13 @@ footer {
 	
 
 }
+
+.currencies {
+	margin: 0.5em;
+}
+
+.currencies .currency {
+	display: inline;
+	padding: .3em;
+	background: #cccccc;
+}

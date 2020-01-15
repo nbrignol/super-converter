@@ -1,4 +1,6 @@
 var rate = 0;
+var currentCurrency = "JPY";
+var currentSymbol = "y";
 
 updateRateWebService();
 
