@@ -27,6 +27,7 @@ function updateRateWebService() {
 		var data = JSON.parse(dataText);
 
 		rate = data.rates[currentCurrency];
+		allRates = data.rates;
 
 		var element = document.querySelector(".userInput");
 		element.classList.remove("disabled");
