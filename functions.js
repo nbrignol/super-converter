@@ -35,6 +35,7 @@ function updateRateWebService() {
 		element.classList.remove("disabled");
 
 		console.log("... done updating rate");
+		processConvert();
 	});
 
 	request.send();
