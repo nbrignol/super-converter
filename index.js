@@ -12,20 +12,18 @@ formElement.addEventListener("submit", function(event){
 	processConvert();
 });
 
+function handleCurrencyChange (event){
+	var currency = event.target.getAttribute("data-currency");
+	var symbol = event.target.getAttribute("data-symbol");
+
+	changeCurrency(currency, symbol);
+	processConvert();
+}
+
 var usdButton = document.querySelector(".currency-USD");
-usdButton.addEventListener("click", function(){
-	currentCurrency = "USD";
-	currentSymbol = "$";
-	rate = allRates[currentCurrency];
-
-	processConvert();
-});
-
 var yenButton = document.querySelector(".currency-JPY");
-yenButton.addEventListener("click", function(){
-	currentCurrency = "JPY";
-	currentSymbol = "y";
-	rate = allRates[currentCurrency];
+var phpButton = document.querySelector(".currency-PHP");
 
-	processConvert();
-});
+usdButton.addEventListener("click", handleCurrencyChange);
+yenButton.addEventListener("click", handleCurrencyChange);
+phpButton.addEventListener("click", handleCurrencyChange);

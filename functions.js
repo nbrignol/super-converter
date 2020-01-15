@@ -38,3 +38,11 @@ function updateRateWebService() {
 
 	request.send();
 }
+
+function changeCurrency(currency, symbol) {
+		
+	currentCurrency = currency;
+	currentSymbol = symbol;
+	rate = allRates[currentCurrency];
+
+}
