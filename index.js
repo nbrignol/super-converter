@@ -1,8 +1,8 @@
 var allRates = {};
 
 var rate = 0;
-var currentCurrency = "JPY";
-var currentSymbol = "y";
+var currentCurrency = "USD";
+var currentSymbol = "$";
 
 updateRateWebService();
 
@@ -13,8 +13,18 @@ formElement.addEventListener("submit", function(event){
 });
 
 function handleCurrencyChange (event){
+
+	var previousSelectedElement = document.querySelector(".currency.selected");
+	if (previousSelectedElement) {
+		previousSelectedElement.classList.remove("selected");
+	}
+
+	event.target.classList.add("selected");
+
+
 	var currency = event.target.getAttribute("data-currency");
 	var symbol = event.target.getAttribute("data-symbol");
+
 
 	changeCurrency(currency, symbol);
 	processConvert();
